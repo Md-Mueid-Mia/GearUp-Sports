@@ -7,8 +7,10 @@ const Header = () => {
     console.log(user);
     const link = <>
         <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
-        <NavLink className='mr-5' to='/signIn'><li>Sign-In</li></NavLink>
-        <NavLink className='mr-5' to='/signUp'><li>Sign-Up</li></NavLink>
+        
+          <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
+          <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
+        
     </>
   return (
     <div className="my-5">
