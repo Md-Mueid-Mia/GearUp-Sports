@@ -4,6 +4,7 @@ import Root from "../layouts/Root";
 import Home from "../layouts/Home";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
+import ErrorPage from './../pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "*",
+    element: <ErrorPage/>,
+  }
  
 ]);
 
