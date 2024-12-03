@@ -5,7 +5,7 @@ import { AuthContext } from "../authProvider/AuthProvider";
 const Header = () => {
     const {user, logOut, loading}=useContext(AuthContext)
     if(loading){
-      return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
+       return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
   }
     // console.log(user);
     const link = <>
@@ -35,10 +35,10 @@ const Header = () => {
             <div class="tooltip  tooltip-bottom" data-tip={user.displayName}>
               <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
             </div>
-            <button onClick={logOut} className="btn bg-orange-600 text-white font-semibold">Log-Out</button>
-          </div>: <button className="btn bg-orange-600 text-white font-semibold"><Link to={'/signIn'}>Log-In</Link></button>
+            <button onClick={logOut} className="btn bg-orange-600 text-white px-3 font-semibold">Log-Out</button>
+          </div>: <button className="btn px-3 bg-orange-600 text-white font-semibold"><Link to={'/signIn'}>Log-In</Link></button>
           }
-          <div className="dropdown">
+          <div className="dropdown relative">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,9 +57,11 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 absolute right-1  w-52 p-2 shadow"
             >
-             {link}
+            
+            {link}
+             
             </ul>
           </div>
         </div>

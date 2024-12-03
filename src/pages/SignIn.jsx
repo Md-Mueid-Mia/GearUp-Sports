@@ -95,6 +95,7 @@ const SignIn = () => {
       })
       .catch((err) => {
         setError({ ...error, login: err.code });
+        toast.error(err.message)
       });
   };
   return (
