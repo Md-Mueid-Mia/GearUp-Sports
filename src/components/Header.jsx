@@ -9,12 +9,12 @@ const Header = () => {
   }
     // console.log(user);
     const link = <>
-        <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
-        <NavLink className='mr-5' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
-        <NavLink className='mr-5' to='/addEquipment'><li>Add Equipment</li></NavLink>
-        <NavLink className='mr-5' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
-          <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
-          <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5' to='/'><li>Home</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5' to='/addEquipment'><li>Add Equipment</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
+          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
+          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         
     </>
   return (
@@ -22,9 +22,9 @@ const Header = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           
-          <Link to={'/'} className=" text-2xl font-extrabold">GearUp <span className="text-orange-600">Sports</span></Link>
+          <Link to={'/'} className="text-lg lg:text-2xl font-extrabold text-teal-600">GearUp <span className="text-orange-600">Sports</span></Link>
         </div>
-        <div className="navbar-center hidden md:flex">
+        <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
            {link}
           </ul>
@@ -39,7 +39,7 @@ const Header = () => {
           </div>: <button className="btn bg-orange-600 text-white font-semibold"><Link to={'/signIn'}>Log-In</Link></button>
           }
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
