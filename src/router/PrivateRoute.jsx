@@ -4,18 +4,15 @@ import { AuthContext } from '../authProvider/AuthProvider';
 
 const PrivateRoute = ({children}) => {
     const {user, loading}= useContext(AuthContext);
-    if(loading){
-        return <div><span className="loading loading-bars loading-lg"></span></div>;
+     if(loading){
+        return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
     }
-    if (!user) {
-        return <Navigate to="/login" replace={true} />
+   
+    if(user && user?.email){
+        return children;
     }
     return (
-        <div>
-            {
-                children
-            }
-        </div>
+        <Navigate state={location.pathname} to={'/signIn'}></Navigate>
     );
 };
 

@@ -3,15 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 
 const Header = () => {
-    const {user, logOut}=useContext(AuthContext)
+    const {user, logOut, loading}=useContext(AuthContext)
+    if(loading){
+      return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
+  }
     // console.log(user);
     const link = <>
         <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
         <NavLink className='mr-5' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
         <NavLink className='mr-5' to='/addEquipment'><li>Add Equipment</li></NavLink>
         <NavLink className='mr-5' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
-        <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
-        <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
           <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
           <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         

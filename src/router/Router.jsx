@@ -5,6 +5,10 @@ import Home from "../layouts/Home";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import ErrorPage from './../pages/ErrorPage';
+import AllEquipment from "../pages/AllEquipment";
+import AddEquipment from "../pages/AddEquipment";
+import MyEquipment from "../pages/MyEquipment";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -15,32 +19,24 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      // {
-      //   path: "/coffee",
-      //   element: <AllCoffee></AllCoffee>,
-      // },
-      // {
-      //   path: "/addCoffee",
-      //   element: <AddCoffee></AddCoffee>,
-      // },
-      // {
-      //   path: "/coffee/:id",
-      //   element: <UpdateCoffee></UpdateCoffee>,
-      // },
-      // {
-      //   path: "/update/:id",
-      //   element: <UpdateCoffee></UpdateCoffee>,
-      // },
-      // {
-      //   path: "/users",
-      //   element: <Users></Users>,
-      // },
       {
-        path: "signIn",
+        path: '/allEquipment',
+        element: <PrivateRoute><AllEquipment/></PrivateRoute>
+      },
+      {
+        path: "/addEquipment",
+        element: <PrivateRoute><AddEquipment/></PrivateRoute>
+      },
+      {
+        path: "/myEquipmentList",
+        element: <PrivateRoute><MyEquipment/></PrivateRoute>
+      },
+      {
+        path: "/signIn",
         element: <SignIn></SignIn>,
       },
       {
-        path: "signUp",
+        path: "/signUp",
         element: <SignUp></SignUp>,
       },
     ],
