@@ -9,12 +9,12 @@ const Header = () => {
   }
     // console.log(user);
     const link = <>
-        <NavLink className='mr-3 lg:mr-5' to='/'><li>Home</li></NavLink>
-        <NavLink className='mr-3 lg:mr-5' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
-        <NavLink className='mr-3 lg:mr-5' to='/addEquipment'><li>Add Equipment</li></NavLink>
-        <NavLink className='mr-3 lg:mr-5' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
-          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
-          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/'><li>Home</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/addEquipment'><li>Add Equipment</li></NavLink>
+        <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
+          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5 hover:text-teal-600 hover:underline'}`} to='/signIn'><li>Sign-In</li></NavLink>
+          <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5 hover:text-teal-600 hover:underline'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         
     </>
   return (

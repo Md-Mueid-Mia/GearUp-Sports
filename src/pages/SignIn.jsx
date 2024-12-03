@@ -7,7 +7,7 @@ import auth from "../firebase/firebase.config";
 import toast from "react-hot-toast";
 
 const SignIn = () => {
-  const { userLogin, setUser, googleLogin } =
+  const { userLogin, setUser, googleLogin, twitterLogin, githubLogin, facebookLogin } =
     useContext(AuthContext);
   const [error, setError] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -27,6 +27,18 @@ const SignIn = () => {
       });
   };
 
+  const handleTwitterLogin = () => {
+    twitterLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
+
   const handlePasswordReset = () => {
     
     const email = emailRef.current.value;
@@ -43,6 +55,29 @@ const SignIn = () => {
     }
   };
 
+  const handleFacebookLogin = () => {
+    facebookLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
+
+  const handleGithubLogin = () => {
+    githubLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
@@ -63,9 +98,9 @@ const SignIn = () => {
       });
   };
   return (
-    <div className="min-h-[calc(100vh-120px)] flex justify-center items-center">
-      <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-5 md:p-10 border">
-        <h2 className="text-3xl font-semibold text-center pt-5">
+    <div className="min-h-[calc(100vh-120px)] flex justify-center items-center ">
+      <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl border">
+        <h2 className="text-xl md:text-3xl font-semibold text-center pt-5">
           Login Your Account
         </h2>
         <div className="divider"></div>
@@ -110,7 +145,7 @@ const SignIn = () => {
           </div>
           <Link onClick={handlePasswordReset}>Forget Password?</Link>
           <div className="form-control mt-6">
-            <button onClick={()=>navigate(location.state)} className="btn btn-neutral rounded-none">Login</button>
+            <button onClick={()=>navigate(location.state)} className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">Login</button>
           </div>
         </form>
         <p className="text-center font-semibold">
@@ -120,12 +155,30 @@ const SignIn = () => {
           </Link>
         </p>
         <div className="divider card-body py-1">or</div>
-        <div className="card-body pt-2 text-center ">
+        <div className="grid md:grid-cols-2 gap-5 pt-2 text-center p-7">
           <button
-            className="btn btn-neutral rounded-none "
-            onClick={() => handleGoogleLogin()}
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={handleGoogleLogin}
           >
-            <FaGoogle /> Login with Google
+            <img className="w-6" src="https://i.ibb.co.com/YW0KKhc/R.png" alt="" /> Google
+          </button>
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={ handleTwitterLogin}
+          >
+            <img className="w-7" src="https://i.ibb.co.com/SJFHpF7/R-1.png" alt="" />  Twitter
+          </button>
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={ handleFacebookLogin}
+          >
+            <img className="w-6" src="https://i.ibb.co.com/gyx4hLH/R-2.png" alt="" />  Facebook
+          </button>
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={handleGithubLogin}
+          >
+            <img className="w-6" src="https://i.ibb.co.com/bj0xRNj/github-PNG28.png" alt="" />  Github
           </button>
          
         </div>

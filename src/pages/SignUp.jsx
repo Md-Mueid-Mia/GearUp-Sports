@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
-  const { createNewUser, setUser, updateUserProfile, googleLogin } =
+  const { createNewUser, setUser, updateUserProfile, googleLogin, facebookLogin, githubLogin,twitterLogin } =
     useContext(AuthContext);
   const [error, setError] = useState({});
   const navigate = useNavigate();
@@ -25,6 +25,41 @@ const SignUp = () => {
         console.log("Error", error.code);
       });
   };
+  const handleTwitterLogin = () => {
+    twitterLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
+
+  const handleFacebookLogin = () => {
+    facebookLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
+
+  const handleGithubLogin = () => {
+    githubLogin()
+     .then((result) => {
+        const user = result.user;
+        navigate(location.state)
+        toast.success('Successfully login your account.')
+      })
+     .catch((error) => {
+        console.log("Error", error);
+      });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,7 +110,7 @@ const SignUp = () => {
    
   return (
     <div className="min-h-[calc(100vh-80px)] flex justify-center items-center">
-      <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl p-10 rounded-none">
+      <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl  rounded-xl border">
         <h2 className="font-semibold text-3xl py-5 text-center">
           Register your account
         </h2>
@@ -157,7 +192,7 @@ const SignUp = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn btn-neutral rounded-none">Register</button>
+            <button className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">Register</button>
           </div>
         </form>
         <p className="font-semibold text-center pb-5">
@@ -167,19 +202,32 @@ const SignUp = () => {
           </Link>
         </p>
         <div className="divider card-body py-1">or</div>
-        <div className="card-body pt-2 text-center ">
+        <div className="grid md:grid-cols-2 gap-5 pt-2 text-center p-7">
           <button
-            className="btn btn-neutral rounded-none "
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
             onClick={handleGoogleLogin}
           >
-            <FaGoogle /> Login with Google
+            <img className="w-6" src="https://i.ibb.co.com/YW0KKhc/R.png" alt="" />  Google
           </button>
-          {/* <button
-            className="btn btn-neutral rounded-none "
-            onClick={() => handleGithubLogin()}
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={ handleTwitterLogin}
           >
-            <FaGithub /> Login with Github
-          </button> */}
+            <img className="w-7" src="https://i.ibb.co.com/SJFHpF7/R-1.png" alt="" />  Twitter
+          </button>
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={ handleFacebookLogin}
+          >
+            <img className="w-6" src="https://i.ibb.co.com/gyx4hLH/R-2.png" alt="" />  Facebook
+          </button>
+          <button
+            className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
+            onClick={handleGithubLogin}
+          >
+            <img className="w-6" src="https://i.ibb.co.com/bj0xRNj/github-PNG28.png" alt="" />  Github
+          </button>
+         
         </div>
       </div>
     </div>

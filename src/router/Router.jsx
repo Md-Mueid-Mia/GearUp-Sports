@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allEquipment',
-        element: <PrivateRoute><AllEquipment/></PrivateRoute>
+        element: <AllEquipment/>
       },
       {
         path: "/addEquipment",
