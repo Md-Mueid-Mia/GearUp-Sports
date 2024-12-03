@@ -8,6 +8,9 @@ const Root = () => {
         <div className='container w-11/12 mx-auto overflow-hidden'>
             <Header/>
             <Outlet/>
+
+
+            
             <Toaster />
         </div>
     );

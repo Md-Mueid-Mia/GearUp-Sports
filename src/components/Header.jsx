@@ -4,10 +4,14 @@ import { AuthContext } from "../authProvider/AuthProvider";
 
 const Header = () => {
     const {user, logOut}=useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
     const link = <>
         <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
-        
+        <NavLink className='mr-5' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
+        <NavLink className='mr-5' to='/addEquipment'><li>Add Equipment</li></NavLink>
+        <NavLink className='mr-5' to='/myEquipmentList'><li>My Equipment List</li></NavLink>
+        <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
+        <NavLink className='mr-5' to='/'><li>Home</li></NavLink>
           <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signIn'><li>Sign-In</li></NavLink>
           <NavLink className={`${user? 'hidden': 'flex mr-5'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         
@@ -17,7 +21,7 @@ const Header = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to={'/'} className=" text-2xl font-extrabold">GearUp <span className="text-orange-600">Sports</span></Link>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">
