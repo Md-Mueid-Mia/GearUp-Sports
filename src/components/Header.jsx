@@ -4,9 +4,8 @@ import { AuthContext } from "../authProvider/AuthProvider";
 
 const Header = () => {
     const {user, logOut, loading}=useContext(AuthContext)
-    if(loading){
-       return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
-  }
+    
+  
     // console.log(user);
     const link = <>
         <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/'><li>Home</li></NavLink>

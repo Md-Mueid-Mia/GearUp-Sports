@@ -102,7 +102,7 @@ const SignIn = () => {
     <div className="min-h-[calc(100vh-120px)] flex justify-center items-center ">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl border">
         <h2 className="text-xl md:text-3xl font-semibold text-center pt-5">
-          Login Your Account
+        Sign-In Your Account
         </h2>
         <div className="divider"></div>
         <form onSubmit={handleSubmit} className="card-body pt-0">
@@ -146,13 +146,13 @@ const SignIn = () => {
           </div>
           <Link onClick={handlePasswordReset}>Forget Password?</Link>
           <div className="form-control mt-6">
-            <button onClick={()=>navigate(location.state)} className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">Login</button>
+            <button onClick={()=>navigate(location.state)} className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">SIGN-IN</button>
           </div>
         </form>
         <p className="text-center font-semibold">
           Don’t Have An Account ? Please{" "}
           <Link to={"/signUp"} className="text-red-500">
-            Register
+            SIGN-UP
           </Link>
         </p>
         <div className="divider card-body py-1">or</div>

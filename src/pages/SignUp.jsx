@@ -112,7 +112,7 @@ const SignUp = () => {
     <div className="min-h-[calc(100vh-80px)] flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl  rounded-xl border">
         <h2 className="font-semibold text-3xl py-5 text-center">
-          Register your account
+          Sign-Up your account
         </h2>
         <div className="divider"></div>
         <form onSubmit={handleSubmit} className="card-body pt-0">
@@ -192,13 +192,13 @@ const SignUp = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">Register</button>
+            <button className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">SIGN UP</button>
           </div>
         </form>
         <p className="font-semibold text-center pb-5">
           Already Have An Account? Please{" "}
           <Link className="text-red-500" to={"/signIn"}>
-            Login
+          SIGN-IN
           </Link>
         </p>
         <div className="divider card-body py-1">or</div>
