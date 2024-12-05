@@ -27,15 +27,15 @@ const UpdateEquipment = () => {
   const [successMessage, setSuccessMessage] = useState("");
 
   // Fetch the existing equipment data
-  useEffect(() => {
-    fetch(`/api/equipment/${id}`) // Replace with your API endpoint
-      .then((response) => response.json())
-      .then((data) => {
-        setFormData({ ...data, userEmail: user?.email, userName: user?.displayName });
-        setLoading(false);
-      })
-      .catch((error) => console.error("Error fetching equipment:", error));
-  }, [id, user?.email, user?.displayName]);
+  // useEffect(() => {
+  //   fetch(`/api/equipment/${id}`) // Replace with your API endpoint
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setFormData({ ...data, userEmail: user?.email, userName: user?.displayName });
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => console.error("Error fetching equipment:", error));
+  // }, [id, user?.email, user?.displayName]);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -62,9 +62,9 @@ const UpdateEquipment = () => {
       .catch((error) => console.error("Error updating equipment:", error));
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
   return (
     <div>
@@ -81,80 +81,195 @@ const UpdateEquipment = () => {
           </div>
         )}
         <form className="space-y-4" onSubmit={handleSubmit}>
-          {/* Image URL */}
+         {/* Item Name */}
+         <div className="form-group">
+          <label className="block font-semibold mb-1">
+            Item Name
+          </label>
+          <input
+            type="text"
+            id="itemName"
+            name="itemName"
+            value={formData.itemName}
+            onChange={handleChange}
+            placeholder="Enter item name"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+        
+        {/* Image URL */}
+        <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Image
+          </label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value={formData.image}
+            placeholder="Enter image URL"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+
+       
+
+        {/* Category Name */}
+        <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Category Name
+          </label>
+          <input
+            type="text"
+            id="categoryName"
+            name="categoryName"
+            value={formData.categoryName}
+            onChange={handleChange}
+            placeholder="Enter category name"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+
+       
+
+        {/* Price and Rating */}
+        <div className="grid grid-cols-2 gap-4">
           <div className="form-group">
-            <label className="block font-semibold mb-1">Image</label>
+            <label className="block font-semibold mb-1" >
+              Price
+            </label>
             <input
-              type="text"
-              name="image"
-              value={formData.image}
+              type="number"
+              id="price"
+              name="price"
+              value={formData.price}
               onChange={handleChange}
-              placeholder="Enter image URL"
+              placeholder="Enter price"
               className="w-full p-2 border rounded"
             />
           </div>
-
-          {/* Item Name */}
           <div className="form-group">
-            <label className="block font-semibold mb-1">Item Name</label>
+            <label className="block font-semibold mb-1" >
+              Rating
+            </label>
             <input
-              type="text"
-              name="itemName"
-              value={formData.itemName}
+              type="number"
+              id="rating"
+              name="rating"
+              value={formData.rating}
               onChange={handleChange}
-              placeholder="Enter item name"
+              placeholder="Enter rating (1-5)"
+              step="0.1"
+              max="5"
+              min="1"
               className="w-full p-2 border rounded"
             />
           </div>
+        </div>
 
-          {/* Category Name */}
+        {/* Customization */}
+        <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Customization
+          </label>
+          <input
+            type="text"
+            id="customization"
+            name="customization"
+            value={formData.customization}
+            onChange={handleChange}
+            placeholder="e.g., Extra grip, Hit paper"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+
+        {/* Processing Time */}
+        <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Processing Time
+          </label>
+          <input
+            type="text"
+            id="processingTime"
+            name="processingTime"
+            value={formData.processingTime}
+            onChange={handleChange}
+            placeholder="Enter delivery time"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+
+        {/* Stock Status */}
+        <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Stock Status
+          </label>
+          <input
+            type="number"
+            id="stockStatus"
+            name="stockStatus"
+            value={formData.stockStatus}
+            onChange={handleChange}
+            placeholder="Enter available product quantity"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+         {/* Description */}
+         <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Description
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            onChange={handleChange}
+            value={formData.description}
+            placeholder="Enter description"
+            className="w-full p-2 border rounded"
+            rows="3"
+          ></textarea>
+        </div>
+
+        {/* User Email and Name (Read-only) */}
+        <div className="grid grid-cols-2 gap-4">
           <div className="form-group">
-            <label className="block font-semibold mb-1">Category Name</label>
+            <label className="block font-semibold mb-1" >
+              User Email
+            </label>
             <input
-              type="text"
-              name="categoryName"
-              value={formData.categoryName}
+              type="email"
+              id="userEmail"
               onChange={handleChange}
-              placeholder="Enter category name"
-              className="w-full p-2 border rounded"
+              name="userEmail"
+              value={formData.userEmail}
+              readOnly
+              className="w-full p-2 border bg-gray-100 rounded"
             />
           </div>
-
-          {/* Other Fields */}
-          {/* Repeat fields for description, price, rating, customization, etc. */}
-
-          {/* User Email and Name (Read-only) */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="form-group">
-              <label className="block font-semibold mb-1">User Email</label>
-              <input
-                type="email"
-                name="userEmail"
-                value={formData.userEmail}
-                readOnly
-                className="w-full p-2 border bg-gray-100 rounded"
-              />
-            </div>
-            <div className="form-group">
-              <label className="block font-semibold mb-1">User Name</label>
-              <input
-                type="text"
-                name="userName"
-                value={formData.userName}
-                readOnly
-                className="w-full p-2 border bg-gray-100 rounded"
-              />
-            </div>
+          <div className="form-group">
+            <label className="block font-semibold mb-1" >
+              User Name
+            </label>
+            <input
+              type="text"
+              id="userName"
+              onChange={handleChange}
+              name="userName"
+              value={formData.userName}
+              readOnly
+              className="w-full p-2 border bg-gray-100 rounded"
+            />
           </div>
+        </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition"
-          >
-            Update Equipment
-          </button>
-        </form>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full btn btn-neutral hover:bg-orange-600 text-white py-2 rounded transition border-none"
+        >
+          Update Product
+        </button>
+      </form>
       </div>
     </div>
   );
