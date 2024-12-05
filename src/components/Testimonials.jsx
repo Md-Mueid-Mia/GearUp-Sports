@@ -10,7 +10,7 @@ const Testimonials = () => {
 
   return (
     <div className="bg-gray-100 py-8">
-      <h2 className="text-2xl font-bold text-center mb-4">What Our Customers Say</h2>
+      <h2 className="text-2xl font-bold text-center mb-4">What Our <span className="text-teal-500">Customers Say</span></h2>
       <div className="container mx-auto flex flex-col md:flex-row justify-center flex-wrap gap-4">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="bg-white p-4 rounded shadow text-center w-full md:w-1/3">

@@ -1,6 +1,9 @@
 import React from 'react';
 import Slider from '../components/Slider';
 import { Helmet } from 'react-helmet';
+import SportsCategories from '../components/SportsCategories';
+import AboutUs from '../components/AboutUs';
+import Testimonials from '../components/Testimonials';
 
 const Home = () => {
     return (
@@ -11,6 +14,9 @@ const Home = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <Slider/>
+            <SportsCategories/>
+            <Testimonials/>
+            <AboutUs/>
 
         </div>
     );
