@@ -36,7 +36,6 @@ const SportsCategories = () => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

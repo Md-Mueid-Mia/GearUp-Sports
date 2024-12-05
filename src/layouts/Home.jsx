@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import SportsCategories from '../components/SportsCategories';
 import AboutUs from '../components/AboutUs';
 import Testimonials from '../components/Testimonials';
+import ProductCards from '../components/ProductCards';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             </Helmet>
             <Slider/>
             <SportsCategories/>
+            <ProductCards/>
             <Testimonials/>
             <AboutUs/>
 

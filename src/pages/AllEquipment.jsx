@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 const AllEquipment = () => {
     const navigate = useNavigate();
-    const equipmentData = [
-        { id: 1, name: "Football", category: "Team Sports", price: "$30" },
-        { id: 2, name: "Tennis Racket", category: "Racquet Sports", price: "$80" },
-        { id: 3, name: "Basketball", category: "Team Sports", price: "$25" },
-        { id: 4, name: "Yoga Mat", category: "Fitness", price: "$15" },
-      ];
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+      // Fetch data from your MongoDB API with a limit of 6 products
+      fetch("http://localhost:4000/equipment?limit=6",{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        
+      })
+        .then((res) => res.json())
+        .then((data) => setProducts(data))
+        .catch((err) => console.error(err));
+    }, []);
+    // console.log(products);
 
   const handleViewDetails = (_id) => {
     // Redirect to the details page with the product ID
-    navigate(`/equipment/${_id}`);
+    // navigate(`/equipment/${_id}`);
+    console.log(_id);
     
   };
     return (
@@ -35,14 +46,14 @@ const AllEquipment = () => {
           </tr>
         </thead>
         <tbody>
-          {equipmentData.map((equipment) => (
+          {products.map((equipment) => (
             <tr key={equipment.id} className="hover:bg-gray-50">
-              <td className="border px-4 py-2">{equipment.name}</td>
+              <td className="border px-4 py-2">{equipment.itemName}</td>
               <td className="border px-4 py-2">{equipment.category}</td>
-              <td className="border px-4 py-2">{equipment.price}</td>
+              <td className="border px-4 py-2">$ {equipment.price}</td>
               <td className="border px-4 py-2 text-center">
                 <button
-                  onClick={() => handleViewDetails(equipment.id)}
+                  onClick={() => handleViewDetails(equipment._id)}
                   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
                 >
                   View Details

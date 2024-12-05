@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { Form } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const AddEquipment = () => {
     const {user}= useContext(AuthContext)
@@ -71,8 +72,9 @@ const AddEquipment = () => {
 
         })
          .then(response => response.json())
-         .then(data => console.log('Success:', data))
+         .then(data => toast.success("Successfully Added Product"))
 
+         form.reset();
 
       };
     return (
