@@ -5,49 +5,75 @@ import { Form } from 'react-router-dom';
 
 const AddEquipment = () => {
     const {user}= useContext(AuthContext)
-    const [formData, setFormData] = useState({
-        image: "",
-        itemName: "",
-        categoryName: "",
-        description: "",
-        price: "",
-        rating: "",
-        customization: "",
-        processingTime: "",
-        stockStatus: "",
-        userEmail: user?.email || "",
-        userName: user?.displayName
-        || "",
-      });
+    console.log(user);
+    // const [formData, setFormData] = useState({
+    //     image: "",
+    //     itemName: "",
+    //     categoryName: "",
+    //     description: "",
+    //     price: "",
+    //     rating: "",
+    //     customization: "",
+    //     processingTime: "",
+    //     stockStatus: "",
+    //     userEmail: user?.email || "",
+    //     userName: user?.displayName
+    //     || "",
+    //   });
     
-      const handleChange = (e) => {
-        const { name, value } = e.target;
+      // const handleChange = (e) => {
+      //   const { name, value } = e.target;
 
-        setFormData({ ...formData, [name]: value });
+      //   setFormData({ ...formData, [name]: value });
         
-      };
+      // };
     
       const handleSubmit = (e) => {
         e.preventDefault();
+        const form = e.target;
+        const itemName = form.itemName.value;
+        const image = form.image.value;
+        const categoryName = form.categoryName.value;
+        const description = form.description.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const category = form.categoryName.value;
+        const customization = form.customization.value;
+        const processingTime = form.processingTime.value;
+        const stockStatus = form.stockStatus.value;
+        const userEmail = user?.email || "";
+        const userName = user?.displayName || "";
+        
+        const formData = {
+          itemName,
+          image,
+          categoryName,
+          description,
+          price,
+          rating,
+          category,
+          customization,
+          processingTime,
+          stockStatus,
+          userEmail,
+          userName,
+        }
+
         
         console.log("Form Data Submitted:", formData);
         // Add logic to send data to the server or database
+        fetch('http://localhost:4000/equipment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
 
-        setFormData({
-            image: "",
-            itemName: "",
-            categoryName: "",
-            description: "",
-            price: "",
-            rating: "",
-            customization: "",
-            processingTime: "",
-            stockStatus: "",
-            userEmail: user?.email || "",
-            userName: user?.displayName || "",
-          });
-        
-          e.target.reset();
+        })
+         .then(response => response.json())
+         .then(data => console.log('Success:', data))
+
+
       };
     return (
         <div>
@@ -68,8 +94,6 @@ const AddEquipment = () => {
             type="text"
             id="itemName"
             name="itemName"
-            value={formData.itemName}
-            onChange={handleChange}
             placeholder="Enter item name"
             className="w-full p-2 border rounded"
           />
@@ -84,7 +108,6 @@ const AddEquipment = () => {
             type="text"
             id="image"
             name="image"
-            value={formData.image}
             placeholder="Enter image URL"
             className="w-full p-2 border rounded"
           />
@@ -101,8 +124,6 @@ const AddEquipment = () => {
             type="text"
             id="categoryName"
             name="categoryName"
-            value={formData.categoryName}
-            onChange={handleChange}
             placeholder="Enter category name"
             className="w-full p-2 border rounded"
           />
@@ -120,8 +141,6 @@ const AddEquipment = () => {
               type="number"
               id="price"
               name="price"
-              value={formData.price}
-              onChange={handleChange}
               placeholder="Enter price"
               className="w-full p-2 border rounded"
             />
@@ -134,8 +153,6 @@ const AddEquipment = () => {
               type="number"
               id="rating"
               name="rating"
-              value={formData.rating}
-              onChange={handleChange}
               placeholder="Enter rating (1-5)"
               step="0.1"
               max="5"
@@ -154,8 +171,6 @@ const AddEquipment = () => {
             type="text"
             id="customization"
             name="customization"
-            value={formData.customization}
-            onChange={handleChange}
             placeholder="e.g., Extra grip, Hit paper"
             className="w-full p-2 border rounded"
           />
@@ -170,8 +185,6 @@ const AddEquipment = () => {
             type="text"
             id="processingTime"
             name="processingTime"
-            value={formData.processingTime}
-            onChange={handleChange}
             placeholder="Enter delivery time"
             className="w-full p-2 border rounded"
           />
@@ -186,8 +199,6 @@ const AddEquipment = () => {
             type="number"
             id="stockStatus"
             name="stockStatus"
-            value={formData.stockStatus}
-            onChange={handleChange}
             placeholder="Enter available product quantity"
             className="w-full p-2 border rounded"
           />
@@ -200,8 +211,6 @@ const AddEquipment = () => {
           <textarea
             id="description"
             name="description"
-            onChange={handleChange}
-            value={formData.description}
             placeholder="Enter description"
             className="w-full p-2 border rounded"
             rows="3"
@@ -217,9 +226,8 @@ const AddEquipment = () => {
             <input
               type="email"
               id="userEmail"
-              onChange={handleChange}
               name="userEmail"
-              value={formData.userEmail}
+              value={user.email}
               readOnly
               className="w-full p-2 border bg-gray-100 rounded"
             />
@@ -231,9 +239,8 @@ const AddEquipment = () => {
             <input
               type="text"
               id="userName"
-              onChange={handleChange}
               name="userName"
-              value={formData.userName}
+              value={user.displayName}
               readOnly
               className="w-full p-2 border bg-gray-100 rounded"
             />
