@@ -11,9 +11,9 @@ const AllEquipment = () => {
         { id: 4, name: "Yoga Mat", category: "Fitness", price: "$15" },
       ];
 
-  const handleViewDetails = (id) => {
+  const handleViewDetails = (_id) => {
     // Redirect to the details page with the product ID
-    navigate(`/equipment/${id}`);
+    navigate(`/equipment/${_id}`);
     
   };
     return (
@@ -40,7 +40,7 @@ const AllEquipment = () => {
               <td className="border px-4 py-2">{equipment.name}</td>
               <td className="border px-4 py-2">{equipment.category}</td>
               <td className="border px-4 py-2">{equipment.price}</td>
-              <td className="border px-4 py-2">
+              <td className="border px-4 py-2 text-center">
                 <button
                   onClick={() => handleViewDetails(equipment.id)}
                   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
