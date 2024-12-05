@@ -53,7 +53,7 @@ const AllEquipment = () => {
               <td className="border px-4 py-2 text-center">
                 <button
                   onClick={() => handleViewDetails(equipment._id)}
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                  className="btn btn-neutral hover:bg-orange-600 text-white px-4 py-2 rounded border-none"
                 >
                   View Details
                 </button>

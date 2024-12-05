@@ -6,28 +6,7 @@ import toast from 'react-hot-toast';
 
 const AddEquipment = () => {
     const {user}= useContext(AuthContext)
-    console.log(user);
-    // const [formData, setFormData] = useState({
-    //     image: "",
-    //     itemName: "",
-    //     categoryName: "",
-    //     description: "",
-    //     price: "",
-    //     rating: "",
-    //     customization: "",
-    //     processingTime: "",
-    //     stockStatus: "",
-    //     userEmail: user?.email || "",
-    //     userName: user?.displayName
-    //     || "",
-    //   });
-    
-      // const handleChange = (e) => {
-      //   const { name, value } = e.target;
-
-      //   setFormData({ ...formData, [name]: value });
-        
-      // };
+  
     
       const handleSubmit = (e) => {
         e.preventDefault();
