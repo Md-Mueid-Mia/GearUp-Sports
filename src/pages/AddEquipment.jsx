@@ -59,6 +59,22 @@ const AddEquipment = () => {
             <div className="add-product-container max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
       <h1 className="text-3xl font-bold text-center mb-4">Add New Product</h1>
       <form className="space-y-4" onSubmit={handleSubmit}>
+         {/* Item Name */}
+         <div className="form-group">
+          <label className="block font-semibold mb-1">
+            Item Name
+          </label>
+          <input
+            type="text"
+            id="itemName"
+            name="itemName"
+            value={formData.itemName}
+            onChange={handleChange}
+            placeholder="Enter item name"
+            className="w-full p-2 border rounded"
+          />
+        </div>
+        
         {/* Image URL */}
         <div className="form-group">
           <label className="block font-semibold mb-1" >
@@ -74,21 +90,7 @@ const AddEquipment = () => {
           />
         </div>
 
-        {/* Item Name */}
-        <div className="form-group">
-          <label className="block font-semibold mb-1">
-            Item Name
-          </label>
-          <input
-            type="text"
-            id="itemName"
-            name="itemName"
-            value={formData.itemName}
-            onChange={handleChange}
-            placeholder="Enter item name"
-            className="w-full p-2 border rounded"
-          />
-        </div>
+       
 
         {/* Category Name */}
         <div className="form-group">
@@ -106,21 +108,7 @@ const AddEquipment = () => {
           />
         </div>
 
-        {/* Description */}
-        <div className="form-group">
-          <label className="block font-semibold mb-1" >
-            Description
-          </label>
-          <textarea
-            id="description"
-            name="description"
-            onChange={handleChange}
-            value={formData.description}
-            placeholder="Enter description"
-            className="w-full p-2 border rounded"
-            rows="3"
-          ></textarea>
-        </div>
+       
 
         {/* Price and Rating */}
         <div className="grid grid-cols-2 gap-4">
@@ -204,6 +192,21 @@ const AddEquipment = () => {
             className="w-full p-2 border rounded"
           />
         </div>
+         {/* Description */}
+         <div className="form-group">
+          <label className="block font-semibold mb-1" >
+            Description
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            onChange={handleChange}
+            value={formData.description}
+            placeholder="Enter description"
+            className="w-full p-2 border rounded"
+            rows="3"
+          ></textarea>
+        </div>
 
         {/* User Email and Name (Read-only) */}
         <div className="grid grid-cols-2 gap-4">
@@ -240,7 +243,7 @@ const AddEquipment = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition"
+          className="w-full btn btn-neutral hover:bg-orange-600 text-white py-2 rounded transition border-none"
         >
           Add Product
         </button>
