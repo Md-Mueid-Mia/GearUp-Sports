@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,26 +23,31 @@ const categories = [
   
 
 const SportsCategories = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Update the `isMobile` state on window resize
+  window.addEventListener("resize", () => {
+    setIsMobile(window.innerWidth < 768);
+  });
   return (
     <div>
          
         <div className="container mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Explore Categories</h2>
       <Swiper
-      // install Swiper modules
+      
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={isMobile ? 1 : 3}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log('slide change')}
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="">
         {categories.map((category) => (<SwiperSlide><div key={category.id} className="rounded overflow-hidden shadow-lg">
             <img src={category.image} alt={category.name} className="w-full h-40 object-cover" />
             <div className="p-4">
-              <h3 className="text-lg font-bold">{category.name}</h3>
+              <h3 className="text-lg font-bold text-center">{category.name}</h3>
             </div>
           </div></SwiperSlide>
           
