@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import DetailsPage from './../pages/DetailsPage';
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
@@ -19,15 +20,14 @@ const ProductCards = () => {
   }, []);
 
   const handleViewDetails = (_id) => {
-    navigate(`/products/${_id}`); // Redirect to the details page
-    console.log(_id);
+   
+    // console.log(_id);
     
     // find one data from database
     const product = products.find((product) => product._id === _id);
-    console.log("Product details:", product);
+    // console.log("Product details:", product);
     
-    // <ProductDetails product={product} />
-    navigate(`/products/${id}`); // Redirect to the details page
+    navigate(`/products/${_id}`); // Redirect to the details page
   };
 
 //   console.log("from product cards", products.slice(0, 6));

@@ -32,7 +32,7 @@ const Header = () => {
         <div className="navbar-end gap-5">
           {
             user?  <div className="flex gap-6 items-center">
-            <div class="tooltip  tooltip-bottom" data-tip={user.displayName}>
+            <div class="tooltip hidden md:flex  tooltip-bottom" data-tip={user.displayName}>
               <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
             </div>
             <button onClick={logOut} className="btn bg-orange-600 text-white px-3 font-semibold">Log-Out</button>

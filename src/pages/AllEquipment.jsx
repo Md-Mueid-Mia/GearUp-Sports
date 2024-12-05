@@ -22,9 +22,7 @@ const AllEquipment = () => {
     // console.log(products);
 
   const handleViewDetails = (_id) => {
-    // Redirect to the details page with the product ID
-    // navigate(`/equipment/${_id}`);
-    console.log(_id);
+    navigate(`/products/${_id}`)
     
   };
     return (
@@ -36,21 +34,22 @@ const AllEquipment = () => {
             </Helmet>
             <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">All Sports Equipment</h1>
+      <div className="overflow-x-auto">
       <table className="table-auto w-full border-collapse border border-gray-200">
         <thead>
           <tr className="bg-gray-100">
             <th className="border px-4 py-2">Name</th>
-            <th className="border px-4 py-2">Category</th>
-            <th className="border px-4 py-2">Price</th>
-            <th className="border px-4 py-2">Actions</th>
+            <th className="border px-4 py-2 ">Category</th>
+            <th className="border px-4 py-2 ">Price</th>
+            <th className="border px-4 py-2 ">Actions</th>
           </tr>
         </thead>
         <tbody>
           {products.map((equipment) => (
             <tr key={equipment.id} className="hover:bg-gray-50">
               <td className="border px-4 py-2">{equipment.itemName}</td>
-              <td className="border px-4 py-2">{equipment.category}</td>
-              <td className="border px-4 py-2">$ {equipment.price}</td>
+              <td className="border px-4 py-2 ">{equipment.category}</td>
+              <td className="border px-4 py-2 ">$ {equipment.price}</td>
               <td className="border px-4 py-2 text-center">
                 <button
                   onClick={() => handleViewDetails(equipment._id)}
@@ -63,6 +62,7 @@ const AllEquipment = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
         </div>
     );
