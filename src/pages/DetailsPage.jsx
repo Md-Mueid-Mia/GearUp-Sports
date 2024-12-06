@@ -28,7 +28,7 @@ const DetailsPage = () => {
         <img
           src={image}
           alt={itemName}
-          className="max-w-sm rounded-lg shadow-2xl"
+          className="w-[300px] md:max-w-sm rounded-lg shadow-2xl"
         />
 
         {/* Product Details */}

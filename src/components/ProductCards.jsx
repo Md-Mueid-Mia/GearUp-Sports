@@ -44,7 +44,7 @@ const ProductCards = () => {
           
         <h2 className="text-xl md:text-3xl font-bold text-center mb-4">Featured Products</h2>
         </Slide>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
          {products.slice(0, 6).map((product, index) => (
           
         <div

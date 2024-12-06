@@ -40,8 +40,6 @@ const AddEquipment = () => {
         }
 
         
-        console.log("Form Data Submitted:", formData);
-        // Add logic to send data to the server or database
         fetch('http://localhost:4000/equipment', {
           method: 'POST',
           headers: {

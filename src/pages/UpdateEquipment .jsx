@@ -75,7 +75,7 @@ const {itemName,
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Updated Equipment:", data);
+        // console.log("Updated Equipment:", data);
         toast.success("Equipment updated successfully!");
         setTimeout(() => navigate("/myEquipmentList"), 2000); // Redirect to another page after 2 seconds
       })

@@ -6,8 +6,6 @@ import ThemeToggle from "./ThemeToggle";
 const Header = () => {
     const {user, logOut} = useContext(AuthContext);
     
-  console.log(user);
-    // console.log(user);
     const link = <>
         <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/'><li>Home</li></NavLink>
         <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/allEquipment'><li>All Sports Equipment</li></NavLink>
@@ -17,16 +15,13 @@ const Header = () => {
           <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5 hover:text-teal-600 hover:underline'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         
     </>
-   
-//    if(loading){
-//     return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
-// }
+ 
   return (
     <div className="my-5">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           
-          <Link to={'/'} className="text-lg lg:text-2xl font-extrabold text-teal-600">GearUp <span className="text-orange-600">Sports</span></Link>
+          <Link to={'/'} className="text-lg flex flex-col md:flex-row lg:text-2xl font-extrabold text-teal-600">GearUp <span className="text-orange-600">Sports</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

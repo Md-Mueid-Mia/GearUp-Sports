@@ -23,7 +23,7 @@ const SignIn = () => {
         toast.success('Successfully login your account.')
       })
       .catch((error) => {
-        console.log("Error", error);
+       
       });
   };
 
@@ -35,7 +35,7 @@ const SignIn = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+       
       });
   }
 
@@ -63,7 +63,7 @@ const SignIn = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }
 
@@ -75,7 +75,7 @@ const SignIn = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }
   const handleSubmit = (e) => {
@@ -84,7 +84,7 @@ const SignIn = () => {
     const email = form.get("email");
     const password = form.get("password");
 
-    // console.log(email,password);
+    
 
     userLogin(email, password)
       .then((result) => {

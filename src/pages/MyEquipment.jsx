@@ -58,8 +58,7 @@ const MyEquipment = () => {
     
   }
   const updateProduct = (id) =>{
-    //update product logic here
-    console.log(id);
+    
     navigate(`/updateEquipment/${id}`);
   }
 if(loading) {

@@ -22,7 +22,7 @@ const SignUp = () => {
         toast.success('Successfully login your account.')
       })
       .catch((error) => {
-        console.log("Error", error.code);
+        // console.log("Error", error.code);
       });
   };
   const handleTwitterLogin = () => {
@@ -33,7 +33,7 @@ const SignUp = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }
 
@@ -45,7 +45,7 @@ const SignUp = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }
 
@@ -57,7 +57,7 @@ const SignUp = () => {
         toast.success('Successfully login your account.')
       })
      .catch((error) => {
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }
 
