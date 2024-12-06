@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user, logOut, loading, setLoading} = useContext(AuthContext);
     
-  
+  console.log(user);
     // console.log(user);
     const link = <>
         <NavLink className='mr-3 lg:mr-5 hover:text-teal-600 hover:underline' to='/'><li>Home</li></NavLink>
@@ -16,6 +16,12 @@ const Header = () => {
           <NavLink className={`${user? 'hidden': 'flex mr-3 lg:mr-5 hover:text-teal-600 hover:underline'}`} to='/signUp'><li>Sign-Up</li></NavLink>
         
     </>
+   
+    // if(!user){
+    //   return  <span className="loading  loading-bars loading-lg"></span>
+       
+        
+    // }
   return (
     <div className="my-5">
       <div className="navbar bg-base-100">

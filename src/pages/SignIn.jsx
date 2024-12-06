@@ -7,7 +7,7 @@ import auth from "../firebase/firebase.config";
 import toast from "react-hot-toast";
 
 const SignIn = () => {
-  const { userLogin, setUser, googleLogin, twitterLogin, githubLogin, facebookLogin } =
+  const {user, userLogin, setUser, googleLogin, twitterLogin, githubLogin, facebookLogin } =
     useContext(AuthContext);
   const [error, setError] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -98,6 +98,14 @@ const SignIn = () => {
         toast.error(err.message)
       });
   };
+  // if(user){
+  // //   return navigate('/signIn')
+  // return setTimeout(() => {
+  //   <span className="loading loading-bars loading-lg"></span>
+  //   navigate('/')
+    
+  // }, 3000);
+  // }
   return (
     <div className="min-h-[calc(100vh-120px)] flex justify-center items-center ">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl border">

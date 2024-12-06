@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
+
 
 const MyEquipment = () => {
   const [products, setProducts] = useState([]);
@@ -21,18 +23,38 @@ const MyEquipment = () => {
   );
   
   const deleteProduct = (id) => {
-    fetch(`http://localhost:4000/equipment/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-    })
-     .then((response) => response.json())
-     .then(() => {
-        setProducts(products.filter((product) => product._id!== id));
-        toast.success('product deleted successfully');
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
+        fetch(`http://localhost:4000/equipment/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+    
+        })
+         .then((response) => response.json())
+         .then(() => {
+         
+            
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+            setProducts(products.filter((product) => product._id!== id));
+          });
+      }
+    });
+    
     
   }
   const updateProduct = (id) =>{
@@ -42,6 +64,7 @@ const MyEquipment = () => {
   }
 if(loading) {
   return <span className="loading loading-bars loading-lg"></span>;
+
 }
   return (
     <div>
