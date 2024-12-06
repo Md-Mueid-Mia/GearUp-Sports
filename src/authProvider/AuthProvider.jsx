@@ -23,8 +23,9 @@ const AuthProvider = ({ children }) => {
   const GithubProvider = new GithubAuthProvider();
   const twitterProvider = new TwitterAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
+ 
   
-
+ 
 
   const createNewUser = (email, password) => {
     setLoading(true)
@@ -83,7 +84,7 @@ const AuthProvider = ({ children }) => {
     githubLogin,
     setLoading,
     twitterLogin,
-    facebookLogin
+    facebookLogin,
   };
 
   useEffect(() => {

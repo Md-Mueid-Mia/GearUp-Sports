@@ -41,8 +41,7 @@ const AboutUs = () => {
               </h3>
             </Slide>
 
-            <Slide
-              direction="left"
+            <Zoom
               delay={1100}
               duration={1200} // Animation duration (in milliseconds)
               triggerOnce
@@ -55,9 +54,8 @@ const AboutUs = () => {
               support your goals. From high-performance gear to the latest
               trends in sports fashion, we have it all.
             </p>
-            </Slide>
-            <Slide
-              direction="left"
+            </Zoom>
+            <Zoom
               delay={1400}
               duration={1200} // Animation duration (in milliseconds)
               triggerOnce
@@ -69,7 +67,7 @@ const AboutUs = () => {
               With GearUp Sports, you're not just buying equipment; you're
               investing in your potential.
             </p>
-            </Slide>
+            </Zoom>
           </div>
 
           {/* Right Section: Image */}

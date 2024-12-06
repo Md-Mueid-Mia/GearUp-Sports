@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const AllEquipment = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
+    const [sortOrder, setSortOrder] = useState("asc");
 
     useEffect(() => {
       // Fetch data from your MongoDB API with a limit of 6 products
@@ -25,6 +26,15 @@ const AllEquipment = () => {
     navigate(`/products/${_id}`)
     
   };
+  const sortProductsByPrice = () => {
+    const sortedProducts = [...products].sort((a, b) =>
+      sortOrder === "asc"
+        ? parseFloat(a.price) - parseFloat(b.price)
+        : parseFloat(b.price) - parseFloat(a.price)
+    );
+    setProducts(sortedProducts);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Toggle sorting order
+  };
     return (
         <div>
             <Helmet>
@@ -34,6 +44,14 @@ const AllEquipment = () => {
             </Helmet>
             <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">All Sports Equipment</h1>
+      <div>
+      <button
+          onClick={sortProductsByPrice}
+          className="btn btn-primary mb-4"
+        >
+          Sort by Price ({sortOrder === "asc" ? "Low to High" : "High to Low"})
+        </button>
+      </div>
       <div className="overflow-x-auto">
       <table className="table-auto w-full border-collapse border border-gray-200">
         <thead>

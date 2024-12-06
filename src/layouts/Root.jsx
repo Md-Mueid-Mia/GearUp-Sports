@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import { Toaster } from 'react-hot-toast';
@@ -8,7 +8,7 @@ import { AuthContext } from '../authProvider/AuthProvider';
 const Root = () => {
     
     return (
-        <div className='container w-11/12 mx-auto overflow-hidden'>
+        <div className='container w-11/12 mx-auto overflow-hidden '>
             <Header/>
             <Outlet/>
 

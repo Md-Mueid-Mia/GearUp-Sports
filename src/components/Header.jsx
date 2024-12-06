@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Link, Navigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
-    const {user, logOut, loading, setLoading} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
     
   console.log(user);
     // console.log(user);
@@ -33,6 +34,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end gap-5">
+        <ThemeToggle/>
           {
             user?  <div className="flex gap-6 items-center">
             <div class="tooltip hidden md:flex  tooltip-bottom" data-tip={user.displayName}>
