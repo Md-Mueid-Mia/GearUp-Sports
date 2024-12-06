@@ -17,11 +17,9 @@ const Header = () => {
         
     </>
    
-    // if(!user){
-    //   return  <span className="loading  loading-bars loading-lg"></span>
-       
-        
-    // }
+//    if(loading){
+//     return <div className='min-h-screen flex justify-center items-center'><span className="loading loading-bars loading-lg"></span></div>
+// }
   return (
     <div className="my-5">
       <div className="navbar bg-base-100">
