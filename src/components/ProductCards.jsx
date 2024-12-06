@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import DetailsPage from './../pages/DetailsPage';
+import { AuthContext } from "../authProvider/AuthProvider";
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate()
+  const {loading} = useContext(AuthContext)
 
   useEffect(() => {
     // Fetch data from your MongoDB API with a limit of 6 products
@@ -30,7 +32,9 @@ const ProductCards = () => {
     navigate(`/products/${_id}`); // Redirect to the details page
   };
 
-//   console.log("from product cards", products.slice(0, 6));
+  if(loading) {
+    return <div>Loading...</div>  // Show loading state while data is being fetched
+   } 
   return (
     <div className="mb-6">
         <h2 className="text-xl md:text-3xl font-bold text-center mb-4">Featured Products</h2>

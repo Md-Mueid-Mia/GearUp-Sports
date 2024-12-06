@@ -22,11 +22,10 @@ const UpdateEquipment = () => {
       .then((data) => {
         setFormData(data);
       })
-      .catch((error) => console.error("Error fetching equipment:", error));
   }, []);
 
-  const data =  formData.find((item) =>(item._id === id));
- console.log(data);
+  const data = formData.find((item) =>(item._id === id));
+//  console.log(data);
   
   
 

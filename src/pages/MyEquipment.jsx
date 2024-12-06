@@ -4,6 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link, useNavigate, useNavigation } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const MyEquipment = () => {
   const [products, setProducts] = useState([]);
@@ -19,13 +20,29 @@ const MyEquipment = () => {
     (product) => product.userEmail === user.email
   );
   
-  const deleteProduct = (id) => {}
+  const deleteProduct = (id) => {
+    fetch(`http://localhost:4000/equipment/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+    })
+     .then((response) => response.json())
+     .then(() => {
+        setProducts(products.filter((product) => product._id!== id));
+        toast.success('product deleted successfully');
+      });
+    
+  }
   const updateProduct = (id) =>{
     //update product logic here
     console.log(id);
     navigate(`/updateEquipment/${id}`);
   }
-
+if(loading) {
+  return <span className="loading loading-bars loading-lg"></span>;
+}
   return (
     <div>
       <Helmet>
@@ -54,7 +71,7 @@ const MyEquipment = () => {
                 <button onClick={()=> updateProduct(item._id)} className="btn btn-neutral block w-full hover:bg-orange-600 border-none">
                  <Link> Update</Link>
                 </button>
-                <button className="btn btn-neutral block mt-6 w-full hover:bg-orange-600 border-none">
+                <button onClick={()=>deleteProduct(item._id)} className="btn btn-neutral block mt-6 w-full hover:bg-orange-600 border-none">
                   Delete
                 </button>
               </div>
