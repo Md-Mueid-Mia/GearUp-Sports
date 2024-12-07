@@ -62,7 +62,7 @@ const AddEquipment = () => {
                 <title>GearUp Sports || Add Equipment</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <div className="add-product-container max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+            <div className="add-product-container max-w-4xl mx-auto p-6 rounded-lg shadow-md">
             <Slide
           direction="right" // Slide up
           delay={200}
