@@ -3,8 +3,8 @@ import { Slide, Zoom } from "react-awesome-reveal";
 
 const AboutUs = () => {
   return (
-    <div className=" py-12 my-6">
-      <div className="container mx-auto p-6 md:p-12">
+    <div className=" pt-12 my-6">
+      <div className="container mx-auto p-6 pb-0">
         <div className="text-center mb-8">
           <Slide
             direction="right" // Slide up

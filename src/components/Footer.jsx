@@ -11,7 +11,7 @@ const Footer = () => {
   This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 */}
 
-      <footer className="">
+      <footer className="pt-8 md:pt-16">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 sm:px-6 lg:px-8 ">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="mx-auto">
