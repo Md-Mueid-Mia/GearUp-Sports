@@ -14,7 +14,7 @@ const MyEquipment = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:4000/equipment")
+    fetch("https://assignment-10-server-beta-rouge.vercel.app/equipment")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -34,7 +34,7 @@ const MyEquipment = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         
-        fetch(`http://localhost:4000/equipment/${id}`, {
+        fetch(`https://assignment-10-server-beta-rouge.vercel.app/equipment/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -83,10 +83,10 @@ if(loading) {
             </div>
             <div className="flex flex-col md:flex-row md:w-11/12  gap-6">
               <div className="flex-col justify-start  md:w-10/12 space-y-2">
-                <h3>Name: {item.itemName}</h3>
+                <h3 className="text-xl font-medium"> {item.itemName}</h3>
                 <p>Category: {item.categoryName}</p>
-                <p>Category: {item.customization}</p>
-                <p>Category: {item.processingTime}</p>
+                <p>customization: {item.customization}</p>
+                <p>processing Time: {item.processingTime}</p>
                 <p>Price: ${item.price}</p>
               </div>
               <div className=" flex flex-col my-auto justify-end ">

@@ -11,7 +11,7 @@ const ProductCards = () => {
 
   useEffect(() => {
     // Fetch data from your MongoDB API with a limit of 6 products
-    fetch("http://localhost:4000/equipment", {
+    fetch("https://assignment-10-server-beta-rouge.vercel.app/equipment", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

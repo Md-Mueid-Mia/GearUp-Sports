@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <PrivateRoute><DetailsPage/></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:4000/equipment')
+        loader: ()=> fetch('https://assignment-10-server-beta-rouge.vercel.app/equipment')
       }
     ],
   },

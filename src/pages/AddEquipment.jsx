@@ -40,7 +40,7 @@ const AddEquipment = () => {
         }
 
         
-        fetch('http://localhost:4000/equipment', {
+        fetch('https://assignment-10-server-beta-rouge.vercel.app/equipment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
