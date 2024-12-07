@@ -78,7 +78,7 @@ const {itemName,
       .then((data) => {
         // console.log("Updated Equipment:", data);
         toast.success("Equipment updated successfully!");
-        setTimeout(() => navigate("/myEquipmentList"), 2000); // Redirect to another page after 2 seconds
+        setTimeout(() => navigate("/myEquipmentList"), 1000); // Redirect to another page after 2 seconds
       })
   };
 
@@ -91,7 +91,7 @@ const {itemName,
         <title>GearUp Sports || Update Equipment</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="update-product-container max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+      <div className="update-product-container max-w-4xl mx-auto p-6  rounded-lg shadow-md">
         
       <Slide
           direction="right" // Slide up
@@ -292,7 +292,7 @@ const {itemName,
                 name="userEmail"
                 value={userEmail}
                 readOnly
-                className="w-full p-2 border bg-gray-100 rounded"
+                className="w-full p-2 border  rounded"
               />
             </div>
             <div className="form-group">
@@ -303,7 +303,7 @@ const {itemName,
                 name="userName"
                 value={userName}
                 readOnly
-                className="w-full p-2 border bg-gray-100 rounded"
+                className="w-full p-2 border  rounded"
               />
             </div>
           </div>

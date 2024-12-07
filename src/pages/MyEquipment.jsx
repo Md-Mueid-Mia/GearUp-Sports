@@ -90,7 +90,7 @@ const MyEquipment = () => {
                 triggerOnce
               >
                 <img
-                  className="w-32  md:w-36 mx-auto"
+                  className="w-32 h-36 md:w-36 mx-auto"
                   src={item.image}
                   alt=""
                 />

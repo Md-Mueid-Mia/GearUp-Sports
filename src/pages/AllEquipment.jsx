@@ -108,7 +108,7 @@ const AllEquipment = () => {
         </thead>
         <tbody>
           {products.map((equipment, index) => (
-            <tr key={equipment.id} className="hover:bg-gray-50">
+            <tr key={equipment.id} className="hover:bg-teal-50">
               <td className="border px-4 py-2">
               <Zoom
                   delay={200}
@@ -123,7 +123,7 @@ const AllEquipment = () => {
                   duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
-                  <img className='w-16' src={equipment.image} alt="" />
+                  <img className='w-16 h-16' src={equipment.image} alt="" />
                 </Zoom></td>
               <td className="border px-4 py-2">
               <Zoom

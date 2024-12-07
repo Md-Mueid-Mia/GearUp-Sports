@@ -278,7 +278,7 @@ const AddEquipment = () => {
               name="userEmail"
               value={user.email}
               readOnly
-              className="w-full p-2 border bg-gray-100 rounded"
+              className="w-full p-2 border  rounded"
             />
             </Zoom>
           </div>
@@ -297,7 +297,7 @@ const AddEquipment = () => {
               name="userName"
               value={user.displayName}
               readOnly
-              className="w-full p-2 border bg-gray-100 rounded"
+              className="w-full p-2 border  rounded"
             />
             </Zoom>
           </div>
