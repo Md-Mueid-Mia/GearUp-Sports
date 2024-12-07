@@ -49,7 +49,7 @@ const ProductCards = () => {
           
         <div
           key={product._id}
-          className="product-card bg-white p-4 rounded shadow-lg"
+          className="product-card shadow-xl border p-4 rounded "
         >
           <Zoom // Delay animation by 500ms
           duration={1500} // Animation duration (in milliseconds)
@@ -59,7 +59,7 @@ const ProductCards = () => {
           <img
             src={product.image}
             alt={product.itemName}
-            className="h-60 w-60 object-cover mb-4 rounded mb-5 mx-auto"
+            className="h-60 w-60 object-cover mb-4 rounded  mx-auto"
           />
          </Zoom>
           <Zoom
@@ -94,7 +94,7 @@ const ProductCards = () => {
           
           <button
             onClick={() => handleViewDetails(product._id)}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition"
+            className="w-full btn btn-neutral hover:bg-orange-600  py-2 rounded transition"
           >
             View Details
           </button>

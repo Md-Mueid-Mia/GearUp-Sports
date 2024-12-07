@@ -11,7 +11,7 @@ const Footer = () => {
   This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 */}
 
-      <footer className="bg-white">
+      <footer className="">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div className="mx-auto">
@@ -49,7 +49,7 @@ const Footer = () => {
                       href="https://www.facebook.com/"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-teal-700 transition hover:text-teal-700/75"
+                      className="text-teal-600 transition hover:text-teal-600/75"
                     >
                       <span className="sr-only">Facebook</span>
                       <svg
@@ -72,7 +72,7 @@ const Footer = () => {
                       href="#"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-teal-700 transition hover:text-teal-700/75"
+                      className="text-teal-600 transition hover:text-teal-600/75"
                     >
                       <span className="sr-only">Instagram</span>
                       <svg
@@ -95,7 +95,7 @@ const Footer = () => {
                       href="#"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-teal-700 transition hover:text-teal-700/75"
+                      className="text-teal-600 transition hover:text-teal-600/75"
                     >
                       <span className="sr-only">Twitter</span>
                       <svg
@@ -114,7 +114,7 @@ const Footer = () => {
                       href="#"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-teal-700 transition hover:text-teal-700/75"
+                      className="text-teal-600 transition hover:text-teal-600/75"
                     >
                       <span className="sr-only">GitHub</span>
                       <svg
@@ -137,7 +137,7 @@ const Footer = () => {
                       href="#"
                       rel="noreferrer"
                       target="_blank"
-                      className="text-teal-700 transition hover:text-teal-700/75"
+                      className="text-teal-600 transition hover:text-teal-600/75"
                     >
                       <span className="sr-only">Dribbble</span>
                       <svg
@@ -165,7 +165,7 @@ const Footer = () => {
                   duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
-                  <p className="text-lg font-medium text-gray-900">About Us</p>
+                  <p className="text-lg font-medium text-gray-600">About Us</p>
                 </Zoom>
                 <ul className="mt-8 space-y-4 text-sm">
                   <Zoom
@@ -175,7 +175,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         Company History
@@ -189,7 +189,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         Meet the Team
@@ -203,7 +203,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         Employee Handbook
@@ -219,7 +219,7 @@ const Footer = () => {
                   duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
-                  <p className="text-lg font-medium text-gray-900">
+                  <p className="text-lg font-medium text-gray-600">
                     Our Services
                   </p>
                 </Zoom>
@@ -232,7 +232,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         Sports management
@@ -246,7 +246,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         Sports Equipment
@@ -260,7 +260,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-700 transition hover:text-gray-700/75"
+                        className="text-gray-600 transition hover:text-gray-600/75"
                         href="#"
                       >
                         {" "}
@@ -277,7 +277,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-                <p className="text-lg font-medium text-gray-900">
+                <p className="text-lg font-medium text-gray-600">
                   Helpful Links
                 </p>
                 </Zoom>
@@ -290,7 +290,7 @@ const Footer = () => {
         >
                   <li>
                     <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className="text-gray-600 transition hover:text-gray-600/75"
                       href="#"
                     >
                       {" "}
@@ -305,7 +305,7 @@ const Footer = () => {
         >
                   <li>
                     <a
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className="text-gray-600 transition hover:text-gray-600/75"
                       href="#"
                     >
                       {" "}
@@ -323,7 +323,7 @@ const Footer = () => {
                       className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="text-gray-700 transition group-hover:text-gray-700/75">
+                      <span className="text-gray-600 transition group-hover:text-gray-600/75">
                         Live Chat
                       </span>
 
@@ -343,7 +343,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-                <p className="text-lg font-medium text-gray-900">Contact Us</p>
+                <p className="text-lg font-medium text-gray-600">Contact Us</p>
             </Zoom>
                 <ul className="mt-8 space-y-4 text-sm">
                 <Zoom
@@ -356,7 +356,7 @@ const Footer = () => {
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="flex-1 text-gray-700">john@doe.com</span>
+                      <span className="flex-1 text-gray-600">john@doe.com</span>
                     </a>
                   </li>
                   </Zoom>
@@ -370,7 +370,7 @@ const Footer = () => {
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="flex-1 text-gray-700">0123456789</span>
+                      <span className="flex-1 text-gray-600">0123456789</span>
                     </a>
                   </li>
                   </Zoom>
@@ -380,7 +380,7 @@ const Footer = () => {
           triggerOnce
         >
                   <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
-                    <address className="-mt-0.5 flex-1 not-italic text-gray-700">
+                    <address className="-mt-0.5 flex-1 not-italic text-gray-600">
                       213 Lane, London, United Kingdom
                     </address>
                   </li>
@@ -393,7 +393,7 @@ const Footer = () => {
           <div className="mt-12 border-t border-gray-100 pt-6">
             <div className="text-center sm:flex sm:justify-between sm:text-left">
             <Zoom
-          delay={700}
+          delay={600}
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >

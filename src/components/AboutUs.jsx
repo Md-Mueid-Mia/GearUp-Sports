@@ -3,7 +3,7 @@ import { Slide, Zoom } from "react-awesome-reveal";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 py-12 my-6">
+    <div className=" py-12 my-6">
       <div className="container mx-auto p-6 md:p-12">
         <div className="text-center mb-8">
           <Slide
@@ -36,7 +36,7 @@ const AboutUs = () => {
               duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl font-bold text-gray-400 mb-4">
                 Welcome to GearUp Sports
               </h3>
             </Slide>
@@ -94,12 +94,12 @@ const AboutUs = () => {
               triggerOnce
             >
               
-          <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
+          <h3 className="text-2xl font-bold text-center mb-6 text-gray-500">
             Why Choose GearUp Sports?
           </h3>
             </Slide>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div className="border shadow-lg rounded-lg p-6 text-center">
             <Zoom
               direction="right"
               delay={200}
@@ -124,7 +124,7 @@ const AboutUs = () => {
               </p>
             </Zoom>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div className="border shadow-lg rounded-lg p-6 text-center">
             <Zoom
               direction="right"
               delay={200}
@@ -148,7 +148,7 @@ const AboutUs = () => {
               </p>
             </Zoom>
             </div>
-            <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div className="border shadow-lg rounded-lg p-6 text-center">
             <Zoom
               direction="right"
               delay={200}

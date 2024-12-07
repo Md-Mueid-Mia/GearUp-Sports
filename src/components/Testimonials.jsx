@@ -22,7 +22,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-8">
+    <div className=" py-8">
       <Slide
       direction="right"
       duration={1500} // Animation duration (in milliseconds)
@@ -36,7 +36,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="bg-white p-4 rounded shadow text-center w-full md:w-1/3"
+            className="border p-4 rounded shadow text-center w-full md:w-1/3"
           >
             <Zoom
               delay={300} // Delay animation by 500ms
