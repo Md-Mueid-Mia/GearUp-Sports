@@ -52,7 +52,7 @@ const ProductCards = () => {
           className="product-card bg-white p-4 rounded shadow-lg"
         >
           <Zoom // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           
@@ -64,7 +64,7 @@ const ProductCards = () => {
          </Zoom>
           <Zoom
           delay={200} // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           
@@ -72,7 +72,7 @@ const ProductCards = () => {
          </Zoom>
          <Zoom
           delay={400} // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           
@@ -80,7 +80,7 @@ const ProductCards = () => {
          </Zoom>
          <Zoom
           delay={600} // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           
@@ -88,7 +88,7 @@ const ProductCards = () => {
          </Zoom>
          <Zoom
           delay={800} // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           

@@ -59,7 +59,7 @@ const SportsCategories = () => {
         <Slide
           direction="right" // Slide up
           delay={500} // Delay animation by 500ms
-          duration={1000} // Animation duration (in milliseconds)
+          duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
           <h2 className="text-2xl font-bold mb-4">Explore Categories</h2>
@@ -87,7 +87,7 @@ const SportsCategories = () => {
                   <div className="p-4">
                     <Zoom
                       delay={200} // Delay animation by 500ms
-                      duration={1000} // Animation duration (in milliseconds)
+                      duration={1500} // Animation duration (in milliseconds)
                       triggerOnce
                     >
                       <h3 className="text-lg font-bold text-center">

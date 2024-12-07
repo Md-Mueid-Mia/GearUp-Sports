@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { Slide, Zoom } from "react-awesome-reveal";
 
 const SignUp = () => {
   const { createNewUser, setUser, updateUserProfile, googleLogin, facebookLogin, githubLogin,twitterLogin } =
@@ -111,10 +112,25 @@ const SignUp = () => {
   return (
     <div className="min-h-[calc(100vh-80px)] flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl  rounded-xl border">
+      <Slide
+          direction="right" // Slide up
+          delay={100}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+        
         <h2 className="font-semibold text-3xl py-5 text-center">
           Sign-Up your account
         </h2>
+        </Slide>
+       
         <div className="divider"></div>
+        <Zoom
+          delay={200}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+        
         <form onSubmit={handleSubmit} className="card-body pt-0">
           <div className="form-control">
             <label className="label">
@@ -195,13 +211,33 @@ const SignUp = () => {
             <button className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">SIGN UP</button>
           </div>
         </form>
+        </Zoom>
+        <Zoom
+          delay={300}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+        
         <p className="font-semibold text-center pb-5">
           Already Have An Account? Please{" "}
           <Link className="text-red-500" to={"/signIn"}>
           SIGN-IN
           </Link>
         </p>
+        </Zoom>
+        <Zoom
+          delay={400}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
         <div className="divider card-body py-1">or</div>
+        </Zoom>
+        
+        <Zoom
+          delay={500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
         <div className="grid md:grid-cols-2 gap-5 pt-2 text-center p-7">
           <button
             className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
@@ -209,6 +245,7 @@ const SignUp = () => {
           >
             <img className="w-6" src="https://i.ibb.co.com/YW0KKhc/R.png" alt="" />  Google
           </button>
+          
           <button
             className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
             onClick={ handleTwitterLogin}
@@ -229,6 +266,7 @@ const SignUp = () => {
           </button>
          
         </div>
+        </Zoom>
       </div>
     </div>
   );

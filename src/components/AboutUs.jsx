@@ -9,7 +9,7 @@ const AboutUs = () => {
           <Slide
             direction="right" // Slide up
             delay={300} // Delay animation by 500ms
-            duration={1000} // Animation duration (in milliseconds)
+            duration={1500} // Animation duration (in milliseconds)
             triggerOnce
           >
             <h2 className="text-4xl font-bold text-teal-500">About Us</h2>
@@ -17,7 +17,7 @@ const AboutUs = () => {
           <Slide
             direction="right" // Slide up
             delay={700} // Delay animation by 500ms
-            duration={1000} // Animation duration (in milliseconds)
+            duration={1500} // Animation duration (in milliseconds)
             triggerOnce
           >
             <p className="text-lg text-gray-600 mt-4">
@@ -33,7 +33,7 @@ const AboutUs = () => {
             <Slide
               direction="left"
               delay={900}
-              duration={1200} // Animation duration (in milliseconds)
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
@@ -42,8 +42,8 @@ const AboutUs = () => {
             </Slide>
 
             <Zoom
-              delay={1100}
-              duration={1200} // Animation duration (in milliseconds)
+              delay={1500}
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               
@@ -56,8 +56,8 @@ const AboutUs = () => {
             </p>
             </Zoom>
             <Zoom
-              delay={1400}
-              duration={1200} // Animation duration (in milliseconds)
+              delay={1500}
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               
@@ -90,7 +90,7 @@ const AboutUs = () => {
         <Slide
               direction="right"
               delay={100}
-              duration={1200} // Animation duration (in milliseconds)
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               

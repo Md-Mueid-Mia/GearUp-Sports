@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { AuthContext } from '../authProvider/AuthProvider';
 import { Form } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { Slide, Zoom } from 'react-awesome-reveal';
 
 const AddEquipment = () => {
     const {user}= useContext(AuthContext)
@@ -62,10 +63,24 @@ const AddEquipment = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="add-product-container max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="text-3xl font-bold text-center mb-4">Add New Product</h1>
+            <Slide
+          direction="right" // Slide up
+          delay={200}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+          
+          <h1 className="text-3xl font-bold text-center mb-4">Add New Product</h1>
+        </Slide>
+      
       <form className="space-y-4" onSubmit={handleSubmit}>
          {/* Item Name */}
          <div className="form-group">
+         <Zoom // Slide up
+          delay={200}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1">
             Item Name
           </label>
@@ -76,10 +91,17 @@ const AddEquipment = () => {
             placeholder="Enter item name"
             className="w-full p-2 border rounded"
           />
+        </Zoom>
+          
         </div>
         
         {/* Image URL */}
         <div className="form-group">
+        <Zoom // Slide up
+          delay={400}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Image
           </label>
@@ -90,12 +112,18 @@ const AddEquipment = () => {
             placeholder="Enter image URL"
             className="w-full p-2 border rounded"
           />
+          </Zoom>
         </div>
 
        
 
         {/* Category Name */}
         <div className="form-group">
+        <Zoom // Slide up
+          delay={600}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Category Name
           </label>
@@ -106,6 +134,7 @@ const AddEquipment = () => {
             placeholder="Enter category name"
             className="w-full p-2 border rounded"
           />
+          </Zoom>
         </div>
 
        
@@ -113,6 +142,11 @@ const AddEquipment = () => {
         {/* Price and Rating */}
         <div className="grid grid-cols-2 gap-4">
           <div className="form-group">
+          <Zoom // Slide up
+          delay={800}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
             <label className="block font-semibold mb-1" >
               Price
             </label>
@@ -123,8 +157,14 @@ const AddEquipment = () => {
               placeholder="Enter price"
               className="w-full p-2 border rounded"
             />
+            </Zoom>
           </div>
           <div className="form-group">
+          <Zoom // Slide up
+          delay={1500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
             <label className="block font-semibold mb-1" >
               Rating
             </label>
@@ -138,11 +178,17 @@ const AddEquipment = () => {
               min="1"
               className="w-full p-2 border rounded"
             />
+            </Zoom>
           </div>
         </div>
 
         {/* Customization */}
         <div className="form-group">
+        <Zoom // Slide up
+          delay={1500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Customization
           </label>
@@ -153,10 +199,16 @@ const AddEquipment = () => {
             placeholder="e.g., Extra grip, Hit paper"
             className="w-full p-2 border rounded"
           />
+          </Zoom>
         </div>
 
         {/* Processing Time */}
         <div className="form-group">
+        <Zoom // Slide up
+          delay={1500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Processing Time
           </label>
@@ -167,10 +219,16 @@ const AddEquipment = () => {
             placeholder="Enter delivery time"
             className="w-full p-2 border rounded"
           />
+          </Zoom>
         </div>
 
         {/* Stock Status */}
         <div className="form-group">
+        <Zoom // Slide up
+          delay={1600}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Stock Status
           </label>
@@ -181,9 +239,15 @@ const AddEquipment = () => {
             placeholder="Enter available product quantity"
             className="w-full p-2 border rounded"
           />
+          </Zoom>
         </div>
          {/* Description */}
          <div className="form-group">
+         <Zoom // Slide up
+          delay={1800}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
           <label className="block font-semibold mb-1" >
             Description
           </label>
@@ -194,11 +258,17 @@ const AddEquipment = () => {
             className="w-full p-2 border rounded"
             rows="3"
           ></textarea>
+          </Zoom>
         </div>
 
         {/* User Email and Name (Read-only) */}
         <div className="grid grid-cols-2 gap-4">
           <div className="form-group">
+          <Zoom // Slide up
+          delay={600}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
             <label className="block font-semibold mb-1" >
               User Email
             </label>
@@ -210,8 +280,14 @@ const AddEquipment = () => {
               readOnly
               className="w-full p-2 border bg-gray-100 rounded"
             />
+            </Zoom>
           </div>
           <div className="form-group">
+          <Zoom // Slide up
+          delay={600}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
             <label className="block font-semibold mb-1" >
               User Name
             </label>
@@ -223,16 +299,25 @@ const AddEquipment = () => {
               readOnly
               className="w-full p-2 border bg-gray-100 rounded"
             />
+            </Zoom>
           </div>
         </div>
 
         {/* Submit Button */}
+        <Zoom // Slide up
+          delay={800}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+
         <button
           type="submit"
           className="w-full btn btn-neutral hover:bg-orange-600 text-white py-2 rounded transition border-none"
         >
           Add Product
         </button>
+        </Zoom>
+        
       </form>
     </div>
         </div>

@@ -25,7 +25,7 @@ const Testimonials = () => {
     <div className="bg-gray-100 py-8">
       <Slide
       direction="right"
-      duration={1200} // Animation duration (in milliseconds)
+      duration={1500} // Animation duration (in milliseconds)
       triggerOnce>
     
       <h2 className="text-2xl font-bold text-center mb-4">
@@ -40,14 +40,14 @@ const Testimonials = () => {
           >
             <Zoom
               delay={300} // Delay animation by 500ms
-              duration={1200} // Animation duration (in milliseconds)
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               <p>"{testimonial.feedback}"</p>
             </Zoom>
             <Zoom
               delay={600} // Delay animation by 500ms
-              duration={1200} // Animation duration (in milliseconds)
+              duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
               <p className="font-bold mt-2">- {testimonial.name}</p>

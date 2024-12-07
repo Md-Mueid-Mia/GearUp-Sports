@@ -5,6 +5,7 @@ import {FaEye, FaEyeSlash,  FaGoogle } from "react-icons/fa";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+import { Slide, Zoom } from "react-awesome-reveal";
 
 const SignIn = () => {
   const {user, userLogin, setUser, googleLogin, twitterLogin, githubLogin, facebookLogin } =
@@ -102,12 +103,26 @@ const SignIn = () => {
   return (
     <div className="min-h-[calc(100vh-120px)] flex justify-center items-center ">
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-xl border">
+      <Slide
+          direction="right" // Slide up
+          delay={100}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
         <h2 className="text-xl md:text-3xl font-semibold text-center pt-5">
         Sign-In Your Account
         </h2>
+        </Slide>
         <div className="divider"></div>
+        <Zoom
+          delay={300}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+
         <form onSubmit={handleSubmit} className="card-body pt-0">
           <div className="form-control">
+          
             <label className="label">
               <span className="label-text">Email</span>
             </label>
@@ -150,20 +165,43 @@ const SignIn = () => {
             <button onClick={()=>navigate(location.state)} className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none">SIGN-IN</button>
           </div>
         </form>
+        </Zoom>
+        <Zoom
+          delay={400}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+
         <p className="text-center font-semibold">
           Don’t Have An Account ? Please{" "}
           <Link to={"/signUp"} className="text-red-500">
             SIGN-UP
           </Link>
         </p>
+        </Zoom>
+        <Zoom
+          delay={500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+
         <div className="divider card-body py-1">or</div>
+        </Zoom>
+        <Zoom
+          delay={500}
+          duration={1500} // Animation duration (in milliseconds)
+          triggerOnce
+        >
+
         <div className="grid md:grid-cols-2 gap-5 pt-2 text-center p-7">
+        
           <button
             className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
             onClick={handleGoogleLogin}
           >
             <img className="w-6" src="https://i.ibb.co.com/YW0KKhc/R.png" alt="" /> Google
           </button>
+        
           <button
             className="btn btn-neutral hover:bg-orange-600 text-white rounded-lg border-none "
             onClick={ handleTwitterLogin}
@@ -184,6 +222,7 @@ const SignIn = () => {
           </button>
          
         </div>
+        </Zoom>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WiDayCloudyHigh } from "react-icons/wi";
-import { GiNightSleep } from "react-icons/gi";
-
+import { FaSun, FaMoon } from "react-icons/fa";
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
@@ -20,8 +18,9 @@ const ThemeToggle = () => {
       className="p-2 border rounded-full "
       onClick={toggleTheme}
     >
-      {theme === 'light' ? <GiNightSleep /> : <WiDayCloudyHigh />}
+      {theme === 'light' ? <FaSun /> : <FaMoon />}
     </button>
+//     
   );
 };
 

@@ -58,24 +58,31 @@ const AllEquipment = () => {
       <table className="table-auto w-full border-collapse border border-teal-300">
         <thead>
           <tr className="bg-teal-50">
+          <th className="border px-4 py-2"><Zoom
+                  delay={100}
+                  duration={1500} // Animation duration (in milliseconds)
+                  triggerOnce
+                >
+                  S/L
+                </Zoom></th>
           
             <th className="border px-4 py-2"><Zoom
                   delay={100}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   Image
                 </Zoom></th>
             <th className="border px-4 py-2"><Zoom
                   delay={100}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   Name
                 </Zoom></th>
             <th className="border px-4 py-2 "><Zoom
                   delay={100}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   Category
@@ -83,7 +90,7 @@ const AllEquipment = () => {
             <th className="border px-4 py-2 ">
             <Zoom
                   delay={100}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   Price $
@@ -91,7 +98,7 @@ const AllEquipment = () => {
             <th className="border px-4 py-2 ">
             <Zoom
                   delay={100}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   Actions
@@ -100,12 +107,20 @@ const AllEquipment = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map((equipment) => (
+          {products.map((equipment, index) => (
             <tr key={equipment.id} className="hover:bg-gray-50">
               <td className="border px-4 py-2">
               <Zoom
                   delay={200}
-                  duration={1200} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
+                  triggerOnce
+                >
+                  {index + 1}
+                </Zoom></td>
+              <td className="border px-4 py-2">
+              <Zoom
+                  delay={200}
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   <img className='w-16' src={equipment.image} alt="" />
@@ -113,7 +128,7 @@ const AllEquipment = () => {
               <td className="border px-4 py-2">
               <Zoom
                   delay={400}
-                  duration={1400} // Animation duration (in milliseconds)
+                  duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
                   {equipment.itemName}

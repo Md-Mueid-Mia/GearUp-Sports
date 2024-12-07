@@ -13,7 +13,7 @@ const Slider = () => {
       infiniteLoop={true}
       stopOnHover={true} 
       showIndicators={true} 
-      transitionTime={1000}
+      transitionTime={1500}
     >
       <div className="lg:h-[650px] relative md:h-[500px]">
         <img cla src="https://i.ibb.co.com/wzzTKZK/woman-8137977-1920.jpg" alt="Slide 1" />
