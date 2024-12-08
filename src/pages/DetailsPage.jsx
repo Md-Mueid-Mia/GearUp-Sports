@@ -45,7 +45,7 @@ const DetailsPage = () => {
         <img
           src={image}
           alt={itemName}
-          className="w-[300px] md:max-w-sm rounded-lg shadow-2xl"
+          className="w-[220px] md:w-[300px] md:max-w-sm rounded-lg shadow-2xl"
         />
         </Zoom>
 
@@ -64,7 +64,7 @@ const DetailsPage = () => {
           triggerOnce
         >
           
-          <p className="text-lg text-gray-600">{description}</p>
+          <p className="text-lg ">{description}</p>
           </Zoom>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

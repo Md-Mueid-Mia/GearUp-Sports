@@ -20,7 +20,7 @@ const AboutUs = () => {
             duration={1500} // Animation duration (in milliseconds)
             triggerOnce
           >
-            <p className="text-lg text-gray-600 mt-4">
+            <p className="text-lg  mt-4">
               Empowering athletes and sports enthusiasts with premium-quality
               gear.
             </p>
@@ -36,7 +36,7 @@ const AboutUs = () => {
               duration={1500} // Animation duration (in milliseconds)
               triggerOnce
             >
-              <h3 className="text-2xl font-bold text-gray-400 mb-4">
+              <h3 className="text-2xl font-bold  mb-4">
                 Welcome to GearUp Sports
               </h3>
             </Slide>
@@ -47,7 +47,7 @@ const AboutUs = () => {
               triggerOnce
             >
               
-            <p className="text-gray-600 leading-relaxed">
+            <p className=" leading-relaxed">
               At GearUp Sports, we are passionate about helping athletes excel
               in their journey. Whether you're a professional or a beginner, our
               collection of sports equipment and accessories is designed to
@@ -61,7 +61,7 @@ const AboutUs = () => {
               triggerOnce
             >
               
-            <p className="text-gray-600 mt-4 leading-relaxed">
+            <p className=" mt-4 leading-relaxed">
               Our mission is simple: to provide high-quality products,
               outstanding customer service, and a seamless shopping experience.
               With GearUp Sports, you're not just buying equipment; you're
@@ -94,7 +94,7 @@ const AboutUs = () => {
               triggerOnce
             >
               
-          <h3 className="text-2xl font-bold text-center mb-6 text-gray-500">
+          <h3 className="text-2xl font-bold text-center mb-6 ">
             Why Choose GearUp Sports?
           </h3>
             </Slide>
@@ -118,7 +118,7 @@ const AboutUs = () => {
               triggerOnce
             >
              
-              <p className="text-gray-600 mt-2">
+              <p className=" mt-2">
                 All products are rigorously tested for durability and
                 performance.
               </p>
@@ -143,7 +143,7 @@ const AboutUs = () => {
               triggerOnce
             >
              
-              <p className="text-gray-600 mt-2">
+              <p className=" mt-2">
                 We deliver sports gear to your doorstep, anywhere in the world.
               </p>
             </Zoom>
@@ -168,7 +168,7 @@ const AboutUs = () => {
               triggerOnce
             >
              
-              <p className="text-gray-600 mt-2">
+              <p className=" mt-2">
                 Our dedicated team is here to assist you with any queries.
               </p>
             </Zoom>

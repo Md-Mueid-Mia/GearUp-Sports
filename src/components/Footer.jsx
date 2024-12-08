@@ -34,7 +34,7 @@ const Footer = () => {
                 duration={1500} // Animation duration (in milliseconds)
                 triggerOnce
               >
-                <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+                <p className="mt-6 max-w-md text-center leading-relaxed  sm:max-w-xs sm:text-left">
                   GearUp Sports - Your Ultimate Sports Equipment Destination
                 </p>
               </Zoom>
@@ -165,7 +165,7 @@ const Footer = () => {
                   duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
-                  <p className="text-lg font-medium text-gray-600">About Us</p>
+                  <p className="text-lg font-medium ">About Us</p>
                 </Zoom>
                 <ul className="mt-8 space-y-4 text-sm">
                   <Zoom
@@ -175,7 +175,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         Company History
@@ -189,7 +189,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         Meet the Team
@@ -203,7 +203,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         Employee Handbook
@@ -219,7 +219,7 @@ const Footer = () => {
                   duration={1500} // Animation duration (in milliseconds)
                   triggerOnce
                 >
-                  <p className="text-lg font-medium text-gray-600">
+                  <p className="text-lg font-medium ">
                     Our Services
                   </p>
                 </Zoom>
@@ -232,7 +232,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         Sports management
@@ -246,7 +246,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         Sports Equipment
@@ -260,7 +260,7 @@ const Footer = () => {
                   >
                     <li>
                       <a
-                        className="text-gray-600 transition hover:text-gray-600/75"
+                        className=" transition hover:/75"
                         href="#"
                       >
                         {" "}
@@ -277,7 +277,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-                <p className="text-lg font-medium text-gray-600">
+                <p className="text-lg font-medium ">
                   Helpful Links
                 </p>
                 </Zoom>
@@ -290,7 +290,7 @@ const Footer = () => {
         >
                   <li>
                     <a
-                      className="text-gray-600 transition hover:text-gray-600/75"
+                      className=" transition hover:/75"
                       href="#"
                     >
                       {" "}
@@ -305,7 +305,7 @@ const Footer = () => {
         >
                   <li>
                     <a
-                      className="text-gray-600 transition hover:text-gray-600/75"
+                      className=" transition hover:/75"
                       href="#"
                     >
                       {" "}
@@ -323,7 +323,7 @@ const Footer = () => {
                       className="group flex justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="text-gray-600 transition group-hover:text-gray-600/75">
+                      <span className=" transition group-hover:/75">
                         Live Chat
                       </span>
 
@@ -343,7 +343,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-                <p className="text-lg font-medium text-gray-600">Contact Us</p>
+                <p className="text-lg font-medium ">Contact Us</p>
             </Zoom>
                 <ul className="mt-8 space-y-4 text-sm">
                 <Zoom
@@ -356,7 +356,7 @@ const Footer = () => {
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="flex-1 text-gray-600">john@doe.com</span>
+                      <span className="flex-1 ">john@doe.com</span>
                     </a>
                   </li>
                   </Zoom>
@@ -370,7 +370,7 @@ const Footer = () => {
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
                     >
-                      <span className="flex-1 text-gray-600">0123456789</span>
+                      <span className="flex-1 ">0123456789</span>
                     </a>
                   </li>
                   </Zoom>
@@ -380,7 +380,7 @@ const Footer = () => {
           triggerOnce
         >
                   <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
-                    <address className="-mt-0.5 flex-1 not-italic text-gray-600">
+                    <address className="-mt-0.5 flex-1 not-italic ">
                       213 Lane, London, United Kingdom
                     </address>
                   </li>
@@ -397,7 +397,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-              <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+              <p className="mt-4 text-sm  sm:order-first sm:mt-0">
                 &copy; 2024{" "}
                 <Link to={"/"} className="  font-extrabold text-teal-600">
                   GearUp <span className="text-orange-600">Sports</span>
@@ -409,7 +409,7 @@ const Footer = () => {
           duration={1500} // Animation duration (in milliseconds)
           triggerOnce
         >
-              <p className="text-sm text-gray-500">
+              <p className="text-sm ">
              
                 <span className="block sm:inline">All rights reserved.</span>
                

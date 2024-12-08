@@ -59,7 +59,7 @@ const ProductCards = () => {
           <img
             src={product.image}
             alt={product.itemName}
-            className="h-60 w-60 object-cover mb-4 rounded  mx-auto"
+            className="md:h-60 w-36 md:w-60 object-cover mb-4 rounded  mx-auto"
           />
          </Zoom>
           <Zoom
@@ -76,7 +76,7 @@ const ProductCards = () => {
           triggerOnce
         >
           
-          <p className="text-gray-500 mb-2">Price: ${product.price}</p>
+          <p className=" mb-2">Price: ${product.price}</p>
          </Zoom>
          <Zoom
           delay={600} // Delay animation by 500ms
@@ -84,7 +84,7 @@ const ProductCards = () => {
           triggerOnce
         >
           
-          <p className="text-gray-500 mb-4">{product.description}</p>
+          <p className=" mb-4">{product.description}</p>
          </Zoom>
          <Zoom
           delay={800} // Delay animation by 500ms
