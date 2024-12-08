@@ -69,8 +69,8 @@ const {itemName,
 // console.log(formData);
 
     // Send updated data to the backend
-    fetch(`http://localhost:4000/equipment/${id}`, {
-      method: "PUT", // Use PUT or PATCH method for updates
+    fetch(`https://assignment-10-server-beta-rouge.vercel.app/equipment/${id}`, {
+      method: "PUT", 
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })

@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import { AuthContext } from '../authProvider/AuthProvider';
 
 const Root = () => {
-    
     return (
         <div className='container w-11/12 mx-auto overflow-hidden '>
             <Header/>

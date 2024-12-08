@@ -21,6 +21,7 @@ const Home = () => {
       <ProductCards />
       <Testimonials />
       <AboutUs />
+      
     </div>
   );
 };

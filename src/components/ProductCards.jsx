@@ -76,7 +76,7 @@ const ProductCards = () => {
           triggerOnce
         >
           
-          <p className="text-gray-700 mb-2">Price: ${product.price}</p>
+          <p className="text-gray-500 mb-2">Price: ${product.price}</p>
          </Zoom>
          <Zoom
           delay={600} // Delay animation by 500ms
