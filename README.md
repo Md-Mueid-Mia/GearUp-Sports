@@ -1,5 +1,5 @@
 # **GearUp Sports**
-<img src="/assignment-10-client/src/assets/GearUpSports.png" width="full" alt="GearUp Sports Logo">
+<img src="https://i.ibb.co.com/HDprB35w/Gear-Up-Sports.png" width="full" alt="GearUp Sports Logo">
 [Live Site URL](https://assignment-10-21d0f.web.app)
 
 GearUp Sports is an online sports equipment store that offers a wide range of high-quality gear for athletes of all levels. Built with React, DaisyUI, and MongoDB, this project provides a seamless shopping experience.
